@@ -19,6 +19,7 @@ jobs:
           allowed-endpoints: >
             *.docker.com:443
             *.docker.io:443
+            docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com:443
             git.launchpad.net:443
             release-assets.githubusercontent.com:443
             github.com:443
