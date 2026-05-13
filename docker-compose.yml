@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: docker.io/jamesits/postgres:edge
+    platform: linux/amd64
+    restart: "unless-stopped"
+    networks:
+      - postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=hunter2 # replace with something secure
+      - POSTGRES_DB=postgres
+    volumes:
+      - ./deployment/postgres:/var/lib/postgresql
+
+  mongodb:
+    image: ghcr.io/ferretdb/ferretdb:2.7.0
+    restart: "unless-stopped"
+    depends_on:
+      - postgres
+    networks:
+      - postgres
+    environment:
+      - FERRETDB_POSTGRESQL_URL=postgres://postgres:hunter2@postgres:5432/postgres
+      - FERRETDB_TELEMETRY=disable
+      - DO_NOT_TRACK=true
+
+networks:
+  postgres: {}

@@ -77,6 +77,7 @@ COPY --from=builder /usr/lib/postgresql/18/lib/vector.so /usr/lib/postgresql/18/
 COPY --from=builder /usr/lib/postgresql/18/lib/pg_documentdb*.so /usr/lib/postgresql/18/lib/
 COPY --from=builder /usr/share/postgresql/18/extension/vector* /usr/share/postgresql/18/extension/
 COPY --from=builder /usr/share/postgresql/18/extension/documentdb* /usr/share/postgresql/18/extension/
+COPY --chown postgres:postgres docker-entrypoint-initdb.d/ /docker-entrypoint-initdb.d/
 
 RUN set -eux; \
 	{ \
