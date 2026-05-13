@@ -1,7 +1,6 @@
 services:
   postgres:
     image: docker.io/jamesits/postgres:edge
-    platform: linux/amd64
     restart: "unless-stopped"
     networks:
       - postgres
