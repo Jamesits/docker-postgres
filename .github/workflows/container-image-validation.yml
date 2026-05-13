@@ -17,6 +17,7 @@ jobs:
         with:
           egress-policy: block
           allowed-endpoints: >
+            auth.docker.io:443
             registry-1.docker.io:443
             git.launchpad.net:443
             release-assets.githubusercontent.com:443
