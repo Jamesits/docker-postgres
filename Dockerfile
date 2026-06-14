@@ -1,5 +1,5 @@
 # renovate: datasource=docker packageName=library/postgres
-ARG POSTGRES_VERSION=18.3-trixie
+ARG POSTGRES_VERSION=18.4-trixie
 FROM docker.io/library/postgres:${POSTGRES_VERSION} AS builder
 
 # renovate: datasource=github-tags packageName=documentdb/documentdb
