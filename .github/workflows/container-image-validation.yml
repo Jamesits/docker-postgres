@@ -26,6 +26,7 @@ jobs:
             api.github.com:443
             deb.debian.org:80
             deb.debian.org:443
+            apt.postgresql.org:443
 
       - uses: actions/checkout@v6
         with:
