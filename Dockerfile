@@ -1,4 +1,3 @@
-# renovate: datasource=docker packageName=library/postgres
 ARG POSTGRES_VERSION=18.4-trixie
 FROM docker.io/library/postgres:${POSTGRES_VERSION} AS builder
 
