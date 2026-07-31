@@ -4,7 +4,7 @@ FROM docker.io/library/postgres:${POSTGRES_VERSION} AS builder
 # renovate: datasource=github-tags packageName=documentdb/documentdb
 ARG DOCUMENTDB_VERSION=v0.111-0
 # renovate: datasource=github-tags packageName=pgvector/pgvector
-ARG PGVECTOR_VERSION=v0.8.5
+ARG PGVECTOR_VERSION=v0.8.6
 
 ENV DEBIAN_FRONTEND=noninteractive
 
