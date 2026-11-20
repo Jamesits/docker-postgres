@@ -1,4 +1,4 @@
-ARG POSTGRES_VERSION=18.7-trixie
+ARG POSTGRES_VERSION=19.0-trixie
 FROM docker.io/library/postgres:${POSTGRES_VERSION} AS builder
 
 # renovate: datasource=github-tags packageName=documentdb/documentdb
